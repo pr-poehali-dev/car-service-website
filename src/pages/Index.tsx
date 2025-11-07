@@ -104,49 +104,72 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-4">
+      <section id="home" className="pt-32 pb-20 px-4 bg-gradient-to-b from-white to-background">
         <div className="container mx-auto">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-secondary leading-tight">
-              Профессиональный автосервис в центре города
+          <div className="max-w-4xl">
+            <div className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold text-sm rounded-full mb-6">
+              Надёжность • Качество • Профессионализм
+            </div>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-secondary leading-[1.1]">
+              Автосервис полного цикла Автовука
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Более 10 лет опыта. Сертифицированные мастера. Гарантия на все работы.
+            <p className="text-xl md:text-2xl text-foreground/70 mb-8 font-medium">
+              Комплексное техническое обслуживание и ремонт автомобилей с 2014 года. Гарантия качества до 12 месяцев.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={() => scrollToSection('contacts')}>
-                Записаться на сервис
+            <div className="flex flex-wrap gap-4 mb-12">
+              <Button size="lg" className="text-base font-semibold px-8" onClick={() => scrollToSection('contacts')}>
+                Записаться на диагностику
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('services')}>
-                Наши услуги
+              <Button size="lg" variant="outline" className="text-base font-semibold px-8" onClick={() => scrollToSection('services')}>
+                Услуги и цены
               </Button>
+            </div>
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">10+</div>
+                <div className="text-sm text-muted-foreground font-medium">лет на рынке</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">5000+</div>
+                <div className="text-sm text-muted-foreground font-medium">довольных клиентов</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-1">100%</div>
+                <div className="text-sm text-muted-foreground font-medium">гарантия качества</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white border-y border-border">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-6">
-                <Icon name="Award" size={40} className="text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">10+ лет опыта</h3>
-                <p className="text-muted-foreground">Работаем с 2014 года и знаем всё о современных автомобилях</p>
+            <Card className="border-2 border-border shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                  <Icon name="Award" size={32} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Опыт работы с 2014 года</h3>
+                <p className="text-foreground/60 leading-relaxed">Более 10 лет безупречной репутации на рынке автомобильных услуг</p>
               </CardContent>
             </Card>
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-6">
-                <Icon name="Users" size={40} className="text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">Сертифицированные мастера</h3>
-                <p className="text-muted-foreground">Команда профессионалов с подтверждёнными навыками</p>
+            <Card className="border-2 border-border shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                  <Icon name="Users" size={32} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Сертифицированные специалисты</h3>
+                <p className="text-foreground/60 leading-relaxed">Команда мастеров с официальными сертификатами и регулярным повышением квалификации</p>
               </CardContent>
             </Card>
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-6">
-                <Icon name="Shield" size={40} className="text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">Гарантия качества</h3>
-                <p className="text-muted-foreground">Гарантия на все виды работ до 12 месяцев</p>
+            <Card className="border-2 border-border shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                  <Icon name="Shield" size={32} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Гарантия на работы</h3>
+                <p className="text-foreground/60 leading-relaxed">Официальная гарантия до 12 месяцев на все виды выполненных работ</p>
               </CardContent>
             </Card>
           </div>
@@ -197,18 +220,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4 bg-white">
+      <section id="services" className="py-24 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-secondary">Наши услуги</h2>
-          <p className="text-center text-muted-foreground mb-12">Полный спектр услуг для вашего автомобиля</p>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">Спектр услуг</h2>
+            <p className="text-lg text-foreground/60">Полный комплекс работ по техническому обслуживанию и ремонту автомобилей всех марок</p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="pt-6">
-                  <Icon name={service.icon} size={48} className="text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <p className="text-primary font-bold text-lg">{service.price}</p>
+              <Card key={index} className="border-2 border-border shadow-sm hover:border-primary/50 transition-all group">
+                <CardContent className="pt-8 pb-8">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all">
+                    <Icon name={service.icon} size={28} className="text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-foreground/60 mb-6 leading-relaxed">{service.description}</p>
+                  <div className="pt-4 border-t border-border">
+                    <span className="text-sm text-muted-foreground font-medium">Стоимость</span>
+                    <p className="text-primary font-bold text-xl mt-1">{service.price}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -216,20 +246,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="price" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-secondary">Прайс-лист</h2>
-          <p className="text-center text-muted-foreground mb-12">Актуальные цены на основные услуги</p>
-          <div className="space-y-8">
+      <section id="price" className="py-24 px-4 bg-gradient-to-b from-background to-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">Прайс-лист услуг</h2>
+            <p className="text-lg text-foreground/60">Прозрачное ценообразование без скрытых платежей</p>
+          </div>
+          <div className="space-y-6">
             {priceList.map((category, index) => (
-              <Card key={index} className="border-none shadow-lg">
-                <CardContent className="pt-6">
-                  <h3 className="text-2xl font-bold mb-6 text-secondary border-b pb-3">{category.category}</h3>
-                  <div className="space-y-4">
+              <Card key={index} className="border-2 border-border shadow-sm">
+                <CardContent className="pt-8 pb-8">
+                  <h3 className="text-2xl font-bold mb-8 text-secondary flex items-center gap-3">
+                    <div className="w-1 h-8 bg-primary rounded-full"></div>
+                    {category.category}
+                  </h3>
+                  <div className="space-y-5">
                     {category.items.map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center">
-                        <span className="text-muted-foreground">{item.name}</span>
-                        <span className="font-semibold text-lg">{item.price}</span>
+                      <div key={idx} className="flex justify-between items-start gap-4 pb-5 border-b border-border last:border-0 last:pb-0">
+                        <span className="text-foreground/80 font-medium">{item.name}</span>
+                        <span className="font-bold text-xl text-secondary whitespace-nowrap">{item.price}</span>
                       </div>
                     ))}
                   </div>
@@ -237,57 +272,91 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          <p className="text-center text-muted-foreground mt-8 text-sm">
-            * Цены указаны ориентировочные. Точная стоимость определяется после диагностики.
-          </p>
+          <div className="mt-10 p-6 bg-primary/5 border-l-4 border-primary rounded-r-lg">
+            <p className="text-foreground/70 font-medium">
+              <Icon name="Info" size={18} className="inline mr-2 text-primary" />
+              Указаны базовые расценки. Финальная стоимость работ определяется после комплексной диагностики автомобиля.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-secondary">Контакты</h2>
-          <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
+      <section id="contacts" className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary">Контактная информация</h2>
+            <p className="text-lg text-foreground/60">Свяжитесь с нами любым удобным способом</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <Icon name="MapPin" size={24} className="text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold mb-1">Адрес</h4>
-                  <p className="text-muted-foreground">г. Москва, ул. Автомобильная, 15</p>
+            <div className="space-y-8">
+              <Card className="border-2 border-border shadow-sm p-6">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-2 text-lg">Адрес сервисного центра</h4>
+                    <p className="text-foreground/70">г. Москва, ул. Автомобильная, д. 15</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <Icon name="Phone" size={24} className="text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold mb-1">Телефон</h4>
-                  <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+              </Card>
+              <Card className="border-2 border-border shadow-sm p-6">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-2 text-lg">Телефон для связи</h4>
+                    <p className="text-foreground/70 text-lg font-semibold">+7 (495) 123-45-67</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <Icon name="Mail" size={24} className="text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-muted-foreground">info@avtovuka.ru</p>
+              </Card>
+              <Card className="border-2 border-border shadow-sm p-6">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-2 text-lg">Электронная почта</h4>
+                    <p className="text-foreground/70">info@avtovuka.ru</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <Icon name="Clock" size={24} className="text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold mb-1">Режим работы</h4>
-                  <p className="text-muted-foreground">Пн-Пт: 9:00 - 20:00</p>
-                  <p className="text-muted-foreground">Сб-Вс: 10:00 - 18:00</p>
+              </Card>
+              <Card className="border-2 border-border shadow-sm p-6">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-2 text-lg">Режим работы</h4>
+                    <p className="text-foreground/70">Понедельник — Пятница: 9:00 - 20:00</p>
+                    <p className="text-foreground/70">Суббота — Воскресенье: 10:00 - 18:00</p>
+                  </div>
                 </div>
-              </div>
+              </Card>
             </div>
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-4">Запишитесь на сервис</h3>
-                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); }}>
-                  <Input placeholder="Ваше имя" required />
-                  <Input type="tel" placeholder="Телефон" required />
-                  <Input placeholder="Марка и модель авто" />
-                  <Textarea placeholder="Опишите проблему или услугу" rows={4} />
-                  <Button type="submit" className="w-full">Отправить заявку</Button>
+            <Card className="border-2 border-primary shadow-md">
+              <CardContent className="pt-8 pb-8">
+                <h3 className="text-2xl font-bold mb-6">Записаться на обслуживание</h3>
+                <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); alert('Заявка принята! Наш менеджер свяжется с вами в ближайшее время.'); }}>
+                  <div>
+                    <label className="text-sm font-semibold mb-2 block">Ваше имя *</label>
+                    <Input placeholder="Иван Иванов" required className="border-2" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-semibold mb-2 block">Контактный телефон *</label>
+                    <Input type="tel" placeholder="+7 (___) ___-__-__" required className="border-2" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-semibold mb-2 block">Марка и модель автомобиля</label>
+                    <Input placeholder="Toyota Camry" className="border-2" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-semibold mb-2 block">Описание проблемы</label>
+                    <Textarea placeholder="Опишите, какие работы необходимо выполнить" rows={4} className="border-2" />
+                  </div>
+                  <Button type="submit" className="w-full text-base font-semibold py-6">Отправить заявку</Button>
+                  <p className="text-xs text-center text-muted-foreground">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
                 </form>
               </CardContent>
             </Card>
@@ -295,14 +364,35 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-secondary text-white py-8 px-4">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Icon name="Car" size={28} className="text-primary" />
-            <span className="text-2xl font-bold">Автовука</span>
+      <footer className="bg-secondary text-white py-12 px-4 border-t-4 border-primary">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Icon name="Car" size={32} className="text-primary" />
+                <span className="text-2xl font-bold">Автовука</span>
+              </div>
+              <p className="text-white/70 leading-relaxed">Профессиональный автосервис полного цикла. Работаем с 2014 года.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-4">Контакты</h4>
+              <div className="space-y-2 text-white/70">
+                <p>+7 (495) 123-45-67</p>
+                <p>info@avtovuka.ru</p>
+                <p>г. Москва, ул. Автомобильная, 15</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-4">Режим работы</h4>
+              <div className="space-y-2 text-white/70">
+                <p>Пн-Пт: 9:00 - 20:00</p>
+                <p>Сб-Вс: 10:00 - 18:00</p>
+              </div>
+            </div>
           </div>
-          <p className="text-white/70 mb-4">Профессиональный автосервис с 2014 года</p>
-          <p className="text-white/50 text-sm">© 2024 Автовука. Все права защищены.</p>
+          <div className="border-t border-white/20 pt-6 text-center">
+            <p className="text-white/50 text-sm">© 2024 Автовука. Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
